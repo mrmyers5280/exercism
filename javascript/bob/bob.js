@@ -13,6 +13,10 @@ Bob.prototype.hey = function (input) {
         Bob.hey = 'Whatever.';
         return Bob.hey;
     }
+    if (input === input.toLocaleUpperCase()) {
+        Bob.hey = "Whoa, chill out!";
+        return Bob.hey;
+    }
 };
 
 module.exports = Bob;
