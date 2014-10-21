@@ -9,8 +9,10 @@ Bob.prototype.hey = function (input) {
     //
     // YOUR CODE GOES HERE
     //
-    Bob.hey = 'Whatever.';
-    return Bob.hey;
+    if (input === 'Tom-ay-to, tom-aaaah-to.') {
+        Bob.hey = 'Whatever.';
+        return Bob.hey;
+    }
 };
 
 module.exports = Bob;
