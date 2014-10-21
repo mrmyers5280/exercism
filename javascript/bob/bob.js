@@ -6,9 +6,11 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function (input) {
-//
-// YOUR CODE GOES HERE
-//
+    //
+    // YOUR CODE GOES HERE
+    //
+    Bob.hey = 'Whatever.';
+    return Bob.hey;
 };
 
 module.exports = Bob;
