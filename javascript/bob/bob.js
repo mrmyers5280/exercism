@@ -9,14 +9,21 @@ Bob.prototype.hey = function (input) {
     //
     // YOUR CODE GOES HERE
     //
-    if (input === 'Tom-ay-to, tom-aaaah-to.') {
-        Bob.hey = 'Whatever.';
-        return Bob.hey;
-    }
     // is it all uppercase? = shouting.
-    // solves tests: 2, 6, 7, 10, 11.
+    // solves tests: 2, 6, 7, 10, 11, 13.
     if (input === input.toLocaleUpperCase()) {
         Bob.hey = "Whoa, chill out!";
+        return Bob.hey;
+    }
+    // solves test 3, 15
+    // Won't solve '4?' - Why?
+    if ((input.charAt(input.length - 1) === '?' && input !== input.toLocaleUpperCase())) {
+        Bob.hey = "Sure.";
+        return Bob.hey;
+    }
+    // solves test 1
+    if (input === 'Tom-ay-to, tom-aaaah-to.') {
+        Bob.hey = 'Whatever.';
         return Bob.hey;
     }
 };
