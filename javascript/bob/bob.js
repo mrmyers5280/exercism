@@ -13,6 +13,8 @@ Bob.prototype.hey = function (input) {
         Bob.hey = 'Whatever.';
         return Bob.hey;
     }
+    // is it all uppercase? = shouting.
+    // solves tests: 2, 6, 7, 10, 11.
     if (input === input.toLocaleUpperCase()) {
         Bob.hey = "Whoa, chill out!";
         return Bob.hey;
