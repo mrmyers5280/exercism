@@ -25,11 +25,9 @@ Bob.prototype.hey = function (input) {
         Bob.hey = "Sure.";
         return Bob.hey;
     }
-    // solves test 1
-    if (input === 'Tom-ay-to, tom-aaaah-to.') {
-        Bob.hey = 'Whatever.';
-        return Bob.hey;
-    }
+    // solves all other tests
+    Bob.hey = 'Whatever.';
+    return Bob.hey;
 };
 
 module.exports = Bob;
