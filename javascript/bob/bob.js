@@ -8,14 +8,14 @@ var Bob = function() {};
 Bob.prototype.hey = function (input) {
     //
     // YOUR CODE GOES HERE
-    // - Order matters
-    // solves tests 16, 17?
+    // 
+    // solves tests 16, 17 - from Scott Harwell@stackoverflow
     if (/^\s*$/.test(input)) {
         Bob.hey = "Fine. Be that way!";
         return Bob.hey;
     }
     // solves tests: 2, 6, 7, 10, 11, 13
-    // had to add !== to skip #9('4?')
+    // had to add !== to skip #9('4?') - thanks derekprior@github.
     if (input === input.toLocaleUpperCase() && input !== input.toLocaleLowerCase()) {
         Bob.hey = "Whoa, chill out!";
         return Bob.hey;
