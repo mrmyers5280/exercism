@@ -13,7 +13,7 @@ describe("Bob", function() {
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xit("asking a question", function() {
+  it("asking a question", function() {
     var result = bob.hey('Does this cryogenic chamber make me look fat?');
     expect(result).toEqual('Sure.');
   });
@@ -63,7 +63,7 @@ describe("Bob", function() {
     expect(result).toEqual('Whatever.');
   });
 
-  xit("shouting with no exclamation mark", function () {
+  it("shouting with no exclamation mark", function () {
     var result = bob.hey('I HATE YOU');
     expect(result).toEqual('Whoa, chill out!');
   });
@@ -73,7 +73,7 @@ describe("Bob", function() {
     expect(result).toEqual('Whatever.');
   });
 
-  xit("prattling on", function () {
+  it("prattling on", function () {
     var result = bob.hey('Wait! Hang on.  Are you going to be OK?');
     expect(result).toEqual('Sure.');
   });
