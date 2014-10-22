@@ -18,12 +18,12 @@ describe("Bob", function() {
     expect(result).toEqual('Sure.');
   });
 
-  xit("talking forcefully", function() {
+  it("talking forcefully", function() {
     var result = bob.hey("Let's go make out behind the gym!");
     expect(result).toEqual('Whatever.');
   });
 
-  xit("using acronyms in regular speech", function() {
+  it("using acronyms in regular speech", function() {
     var result = bob.hey("It's OK if you don't want to go to the DMV.");
     expect(result).toEqual('Whatever.');
   });
@@ -38,7 +38,7 @@ describe("Bob", function() {
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xit("only numbers", function() {
+  it("only numbers", function() {
     var result = bob.hey('1, 2, 3');
     expect(result).toEqual('Whatever.');
   });
@@ -58,7 +58,7 @@ describe("Bob", function() {
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xit("calmly speaking about umlauts", function() {
+  it("calmly speaking about umlauts", function() {
     var result = bob.hey("\xfcML\xe4\xdcTS");
     expect(result).toEqual('Whatever.');
   });
@@ -68,7 +68,7 @@ describe("Bob", function() {
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xit("statement containing question mark", function() {
+  it("statement containing question mark", function() {
     var result = bob.hey('Ending with a ? means a question.');
     expect(result).toEqual('Whatever.');
   });
