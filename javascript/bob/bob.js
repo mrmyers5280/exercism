@@ -8,16 +8,20 @@ var Bob = function() {};
 Bob.prototype.hey = function (input) {
     //
     // YOUR CODE GOES HERE
-    //
-    // is it all uppercase? = shouting.
-    // solves tests: 2, 6, 7, 10, 11, 13.
-    if (input === input.toLocaleUpperCase()) {
+    // - Order matters
+    // solves tests 16, 17?
+    if (/^\s*$/.test(input)) {
+        Bob.hey = "Fine. Be that way!";
+        return Bob.hey;
+    }
+    // solves tests: 2, 6, 7, 10, 11, 13
+    // had to add !== to skip #9('4?')
+    if (input === input.toLocaleUpperCase() && input !== input.toLocaleLowerCase()) {
         Bob.hey = "Whoa, chill out!";
         return Bob.hey;
     }
-    // solves test 3, 15
-    // Won't solve '4?' - Why?
-    if ((input.charAt(input.length - 1) === '?' && input !== input.toLocaleUpperCase())) {
+    // solves test 3, 9, 15
+    else if (input.charAt(input.length - 1) === '?') {
         Bob.hey = "Sure.";
         return Bob.hey;
     }
